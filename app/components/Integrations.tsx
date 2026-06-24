@@ -1,11 +1,10 @@
-import { Cloud, Droplets, Image as ImageIcon, Instagram } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 const SERVICES = [
-  { name: 'Google Photos', icon: ImageIcon },
-  { name: 'iCloud', icon: Cloud },
-  { name: 'Dropbox', icon: Droplets },
-  { name: 'Instagram', icon: Instagram },
+  { name: 'Google Photos', logo: '/logos/google-photos.png', border: true, scale: '' },
+  { name: 'iCloud', logo: '/logos/icloud.png', border: true, scale: '' },
+  { name: 'Dropbox', logo: '/logos/dropbox.png', border: false, scale: '' },
+  { name: 'Instagram', logo: '/logos/instagram.avif', border: false, scale: 'scale-125' },
 ] as const;
 
 export function Integrations() {
@@ -33,12 +32,11 @@ export function Integrations() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {SERVICES.map((s, i) => {
-            const Icon = s.icon;
             return (
               <Reveal key={s.name} delay={i * 0.06} y={16}>
                 <div className="group bg-white rounded-2xl p-7 border border-black/[0.05] hover:border-black/15 hover:shadow-[0_10px_30px_-12px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col items-center gap-3.5">
-                  <div className="w-12 h-12 rounded-xl bg-[#f5f1eb] flex items-center justify-center text-black/70 group-hover:scale-105 transition-transform">
-                    <Icon className="w-6 h-6" strokeWidth={1.5} />
+                  <div className={`w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform${s.border ? ' border border-black/20' : ''}`}>
+                    <img src={s.logo} alt={s.name} className={`w-full h-full object-contain${s.scale ? ` ${s.scale}` : ''}`} />
                   </div>
                   <p className="font-sans text-[13px] font-medium text-black/80">
                     {s.name}
