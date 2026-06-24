@@ -3,7 +3,7 @@ import { Reveal } from './Reveal';
 
 export function Hero() {
   return (
-    <section className="relative px-5 sm:px-8 pt-28 md:pt-36 pb-20 md:pb-32">
+    <section className="relative px-5 sm:px-8 pt-24 md:pt-28 pb-20 md:pb-32">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-20 items-center">
           <div className="order-2 lg:order-1">
