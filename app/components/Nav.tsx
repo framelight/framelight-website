@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export function Nav() {
@@ -17,7 +18,7 @@ export function Nav() {
           <a href={anchor('#moments')} className="text-[13px] text-black/70 hover:text-black transition-colors">Moments</a>
         </div>
 
-        <a
+        <Link
           href="/"
           className="absolute left-1/2 -translate-x-1/2 flex h-10 w-32 sm:h-11 sm:w-40 md:h-12 md:w-48 items-center justify-center overflow-hidden"
           aria-label="Framelight home"
@@ -30,17 +31,17 @@ export function Nav() {
             priority
             className="h-40 sm:h-48 md:h-56 w-auto max-w-none object-contain"
           />
-        </a>
+        </Link>
 
         <div className="flex items-center gap-3 shrink-0 ml-auto md:ml-0">
           {!isHome && (
-            <a
+            <Link
               href="/"
               className="text-[12px] md:text-[13px] text-black/70 hover:text-black transition-colors font-sans inline-flex items-center gap-1.5 shrink-0"
             >
               <span aria-hidden>←</span>
               Back
-            </a>
+            </Link>
           )}
 
           <a

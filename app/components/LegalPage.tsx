@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Nav } from './Nav';
 import { Footer } from './Footer';
 
@@ -34,13 +35,13 @@ export function LegalPage({
       <Nav />
       <main className="pt-32 pb-24 px-5 sm:px-8">
         <div className="max-w-3xl mx-auto">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center gap-1.5 text-[13px] text-black/60 hover:text-black transition-colors font-sans mb-8"
           >
             <span aria-hidden>←</span>
             Back to home
-          </a>
+          </Link>
 
           <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-black/50 mb-5 font-medium">
             Legal
