@@ -22,8 +22,8 @@ const SOCIALS = [
   },
   {
     name: 'X',
-    cta: 'Coming soon',
-    href: '#',
+    cta: 'Follow us',
+    href: 'https://x.com/FramelightAI',
     logo: '/logos/x.png',
   },
 ] as const;

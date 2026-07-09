@@ -85,7 +85,13 @@ export function Footer() {
             {CONTACT_EMAIL}
           </a>
           <div className="flex items-center gap-3 order-1 sm:order-3">
-            <a href="#" aria-label="X" className="opacity-60 hover:opacity-100 transition-opacity">
+            <a
+              href="https://x.com/FramelightAI"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="opacity-60 hover:opacity-100 transition-opacity"
+            >
               <img src="/logos/x.png" alt="X" className="w-5 h-5 rounded" />
             </a>
             <a
