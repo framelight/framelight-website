@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 };
 
-const CONTACT_EMAIL = 'framelight.ai@gmail.com';
+const CONTACT_EMAIL = 'legal@framelight.ai';
 const LAST_UPDATED = 'July 6, 2026';
 
 export default function TermsOfService() {
@@ -20,8 +20,8 @@ export default function TermsOfService() {
         <p>
           These Terms of Service (&quot;Terms&quot;) govern your use of
           framelight.ai, our waitlist, our Discord community, and the
-          Framelight mobile app (collectively, the &quot;Service&quot;). By
-          using the Service, you agree to these Terms. If you don&apos;t
+          Framelight mobile app (collectively, the &quot;Service&quot;) provided by the Framelight Team ("we", "us", or "our").
+          By using the Service, you agree to these Terms. If you don&apos;t
           agree, please don&apos;t use the Service.
         </p>
       </LegalSection>
@@ -106,12 +106,12 @@ export default function TermsOfService() {
 
       <LegalSection title="Limitation of Liability">
         <p>
-          To the fullest extent permitted by law, Framelight will not be
+          To the fullest extent permitted by law, Framelight project team, creators, 
+          and contributors will will not be
           liable for any indirect, incidental, special, or consequential
           damages arising from your use of the Service. Our total liability
-          for any claim relating to the Service will not exceed the amount
-          you&apos;ve paid us in the past 12 months (which, during the free
-          waitlist and beta period, is zero).
+          for any claim relating to the Service will not exceed the greater of $50
+          or the total amount you have paid us in the past 12 months.
         </p>
       </LegalSection>
 
@@ -128,7 +128,9 @@ export default function TermsOfService() {
       <LegalSection title="Changes to These Terms">
         <p>
           We may update these Terms from time to time. If we make material
-          changes, we&apos;ll update the &quot;Last updated&quot; date above.
+          changes, we&apos;ll update the &quot;Last updated&quot; date above 
+          and may provide additional notice (such as through the app, via email, 
+          or in our Discord server).
           Continued use of the Service after changes take effect constitutes
           acceptance of the updated Terms.
         </p>
@@ -136,7 +138,7 @@ export default function TermsOfService() {
 
       <LegalSection title="Governing Law">
         <p>
-          These Terms are governed by the laws of the United States, without
+          These Terms are governed by the laws of the State of Delaware, without
           regard to conflict-of-law principles, unless local law in your
           jurisdiction requires otherwise.
         </p>

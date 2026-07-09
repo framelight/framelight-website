@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 };
 
-const CONTACT_EMAIL = 'framelight.ai@gmail.com';
+const CONTACT_EMAIL = 'legal@framelight.ai';
 const LAST_UPDATED = 'July 6, 2026';
 
 export default function PrivacyPolicy() {
@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
     <LegalPage title="Privacy Policy" lastUpdated={LAST_UPDATED}>
       <LegalSection title="Overview">
         <p>
-          This Privacy Policy explains how Framelight (&quot;Framelight,&quot;
+          This Privacy Policy explains how the Framelight Team (&quot;Framelight,&quot;
           &quot;we,&quot; &quot;us&quot;) collects, uses, and protects
           information when you visit framelight.ai, join our waitlist, join
           our Discord community, or use the Framelight mobile app once it is
@@ -55,6 +55,54 @@ export default function PrivacyPolicy() {
           to the provider you selected, under your own account and their
           privacy policy — Framelight does not store a copy.
         </p>
+        <p>
+          <strong className="text-black/80">Mobile app analytics.</strong>{' '}
+
+        </p>
+        
+      </LegalSection>
+
+      <LegalSection title="Legal Bases for Processing">
+        <p>
+          For users in jurisdictions that require a legal basis for
+          processing, we process personal information on the following
+          bases:
+        </p>
+        <div className="overflow-x-auto">
+          <table className="min-w-full border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-black/10 text-left">
+                <th className="py-2 pr-4 font-semibold text-black/80">
+                  Data
+                </th>
+                <th className="py-2 pr-4 font-semibold text-black/80">
+                  Legal basis
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-black/5 align-top">
+                <td className="py-2 pr-4">Waitlist emails</td>
+                <td className="py-2 pr-4">Consent, when you explicitly opt in</td>
+              </tr>
+              <tr className="border-b border-black/5 align-top">
+                <td className="py-2 pr-4">Server logs and security data</td>
+                <td className="py-2 pr-4">
+                  Legitimate interest in maintaining service uptime and
+                  security
+                </td>
+              </tr>
+              <tr className="align-top">
+                <td className="py-2 pr-4">Support requests</td>
+                <td className="py-2 pr-4">Legitimate interest in responding to support requests</td>
+              </tr>
+              <tr className="align-top">
+                <td className="py-2 pr-4">App diagnostics and crash logs</td>
+                <td className="py-2 pr-4">Legitimate interest in maintaining app stability, fixing bugs, and providing a reliable user experience</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </LegalSection>
 
       <LegalSection title="How We Use Your Information">
@@ -110,7 +158,9 @@ export default function PrivacyPolicy() {
         <p>
           Depending on where you live, you may have the right to access,
           correct, export, or delete the personal information we hold about
-          you, and to opt out of future communications. To exercise any of
+          you, and to opt out of future communications. Where we process your
+          information based on your consent (such as for our waitlist), you have
+          the right to withdraw that consent at any time. To exercise any of
           these rights, email us at{' '}
           <a
             href={`mailto:${CONTACT_EMAIL}`}
