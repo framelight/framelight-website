@@ -86,8 +86,8 @@ function confirmationHtml(): string {
             </tr>
             <tr>
               <td style="padding:0 40px;font-family:Helvetica,Arial,sans-serif;color:#444;font-size:16px;line-height:1.6;">
-                <p style="margin:0 0 16px;">You&rsquo;re officially on the list for early access to Framelight &mdash; real-time composition guidance that helps you capture better moments, right as they happen.</p>
-                <p style="margin:0 0 24px;">We&rsquo;ll email you the moment your invite is ready. In the meantime, follow along for tips, frames, and behind-the-scenes &mdash; we&rsquo;d love to have you:</p>
+                <p style="margin:0 0 16px;">You&rsquo;re officially on the list for early access to Framelight, real-time composition guidance that helps you capture better moments, right as they happen.</p>
+                <p style="margin:0 0 24px;">We&rsquo;ll stay in touch. In the meantime, follow along for tips, frames, and behind-the-scenes. We&rsquo;d love to have you:</p>
               </td>
             </tr>
             <tr>
@@ -113,9 +113,9 @@ function confirmationText(): string {
   const socials = SOCIALS.map((s) => `${s.label}: ${s.href}`).join("\n");
   return `Thanks for joining the waitlist!
 
-You're officially on the list for early access to Framelight — real-time composition guidance that helps you capture better moments, right as they happen.
+You're officially on the list for early access to Framelight, real-time composition guidance that helps you capture better moments, right as they happen.
 
-We'll email you the moment your invite is ready. In the meantime, follow along for tips, frames, and behind-the-scenes — we'd love to have you:
+We'll stay in touch. In the meantime, follow along for tips, frames, and behind-the-scenes. We'd love to have you:
 
 ${socials}
 
