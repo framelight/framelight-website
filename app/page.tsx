@@ -4,7 +4,6 @@ import { Problem } from './components/Problem';
 import { Demo } from './components/Demo';
 import { UseCases } from './components/UseCases';
 import { Techniques } from './components/Techniques';
-import { Integrations } from './components/Integrations';
 import { Socials } from './components/Socials';
 import { Waitlist } from './components/Waitlist';
 import { Footer } from './components/Footer';
@@ -19,7 +18,6 @@ export default function Home() {
         <Demo />
         <UseCases />
         <Techniques />
-        <Integrations />
         <Socials />
         <Waitlist />
       </main>
