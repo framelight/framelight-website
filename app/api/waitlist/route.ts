@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 import { waitlist } from "@/lib/db/schema";
-import { addToBrevoWaitlist } from "@/lib/brevo";
+import { addToBrevoWaitlist, sendWaitlistConfirmation } from "@/lib/brevo";
 import { NextResponse, after } from "next/server";
 
 export async function POST(request: Request) {
@@ -26,9 +26,13 @@ export async function POST(request: Request) {
     const normalizedEmail = email.toLowerCase();
     await db.insert(waitlist).values({ email: normalizedEmail });
 
-    // Sync to Brevo after the response is sent — keeps signup fast and
-    // never lets a Brevo hiccup block or fail the waitlist insert.
-    after(() => addToBrevoWaitlist(normalizedEmail));
+    // Sync to Brevo and send the confirmation email after the response is
+    // sent — keeps signup fast and never lets a Brevo hiccup block or fail
+    // the waitlist insert.
+    after(async () => {
+      await addToBrevoWaitlist(normalizedEmail);
+      await sendWaitlistConfirmation(normalizedEmail);
+    });
 
     return NextResponse.json(
       { message: "Successfully joined the waitlist" },
