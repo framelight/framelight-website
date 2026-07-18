@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const CONTACT_EMAIL = 'framelight.ai@gmail.com';
-const LAST_UPDATED = 'July 6, 2026';
+const LAST_UPDATED = 'July 18, 2026';
 
 export default function PrivacyPolicy() {
   return (
@@ -46,14 +46,24 @@ export default function PrivacyPolicy() {
           Discord&apos;s own privacy policy and terms, not this one.
         </p>
         <p>
-          <strong className="text-black/80">Mobile app.</strong>{' '}
-          Framelight&apos;s composition guidance is processed on-device — your
-          camera feed and photos are analyzed locally on your phone and are
-          not uploaded to Framelight&apos;s servers. If you choose to save a
-          photo to a connected account (such as Google Photos, iCloud,
+          <strong className="text-black/80">Mobile app.</strong> The
+          Framelight app does not collect, store, or process any personal or
+          sensitive user data in a way accessible to the developers of the
+          app. The app does not use analytics tools, tracking technologies, or
+          third-party SDKs that collect user information. If you choose to
+          save a photo to a connected account (such as Google Photos, iCloud,
           Dropbox, or Instagram), that photo is sent directly from your device
           to the provider you selected, under your own account and their
           privacy policy — Framelight does not store a copy.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="Camera Access">
+        <p>
+          The app requests access to the device camera solely for the purpose
+          of providing its core functionality. Camera data is used in real
+          time and is not recorded, stored, or shared with the developers or
+          any third parties.
         </p>
       </LegalSection>
 
