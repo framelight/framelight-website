@@ -14,8 +14,7 @@ const LINKS = [
   {
     title: 'Company',
     items: [
-      { label: 'About', href: '#' },
-      { label: 'Press', href: '#' },
+      { label: 'Support', href: '/support' },
       { label: 'Contact', href: `mailto:${CONTACT_EMAIL}` },
     ],
   },

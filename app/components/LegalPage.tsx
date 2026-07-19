@@ -24,10 +24,12 @@ export function LegalSection({
 export function LegalPage({
   title,
   lastUpdated,
+  eyebrow = 'Legal',
   children,
 }: {
   title: string;
-  lastUpdated: string;
+  lastUpdated?: string;
+  eyebrow?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -44,14 +46,20 @@ export function LegalPage({
           </Link>
 
           <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-black/50 mb-5 font-medium">
-            Legal
+            {eyebrow}
           </p>
-          <h1 className="font-serif font-normal text-[clamp(2rem,5vw,3rem)] leading-[1.05] tracking-[-0.025em] mb-4">
+          <h1
+            className={`font-serif font-normal text-[clamp(2rem,5vw,3rem)] leading-[1.05] tracking-[-0.025em] ${
+              lastUpdated ? 'mb-4' : 'mb-14'
+            }`}
+          >
             {title}
           </h1>
-          <p className="text-[14px] text-black/45 mb-14">
-            Last updated: {lastUpdated}
-          </p>
+          {lastUpdated && (
+            <p className="text-[14px] text-black/45 mb-14">
+              Last updated: {lastUpdated}
+            </p>
+          )}
 
           {children}
         </div>
