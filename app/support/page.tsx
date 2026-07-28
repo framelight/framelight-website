@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 };
 
-const SUPPORT_EMAIL = 'framelight.ai@gmail.com';
+const SUPPORT_EMAIL = 'team@framelight.ai';
 const DISCORD_URL = 'https://discord.gg/cN3VDRbzXz';
 
 export default function Support() {

@@ -1,7 +1,76 @@
 import Image from 'next/image';
 import { Reveal } from './Reveal';
 
-const FEATURED = [
+type WheelPhoto = {
+  src: string;
+  alt: string;
+  width: number;
+};
+
+type UseBlock = {
+  image: string;
+  title: string;
+  caption: string;
+  tag: string;
+};
+
+// Real shots taken with Framelight — shown as an endless rolling wheel.
+const WHEEL: WheelPhoto[] = [
+  {
+    src: '/images/wheel/wheel-01.jpg',
+    alt: 'Golden Gate Bridge at sunset, shot on Framelight',
+    width: 960,
+  },
+  {
+    src: '/images/wheel/wheel-02.jpg',
+    alt: 'American flag flying at a lookout at dusk',
+    width: 540,
+  },
+  {
+    src: '/images/wheel/wheel-03.jpg',
+    alt: 'Cyclists riding under a bridge at sunset',
+    width: 960,
+  },
+  {
+    src: '/images/wheel/wheel-04.jpg',
+    alt: 'Flag and mural under a deep blue evening sky',
+    width: 540,
+  },
+  {
+    src: '/images/wheel/wheel-05.jpg',
+    alt: 'Red amaranth flowers against a pink sunset sky',
+    width: 404,
+  },
+  {
+    src: '/images/wheel/wheel-06.jpg',
+    alt: 'Tree-lined campus lawn on a clear morning',
+    width: 540,
+  },
+  {
+    src: '/images/wheel/wheel-07.jpg',
+    alt: 'Concrete tower against a gradient blue sky',
+    width: 540,
+  },
+  {
+    src: '/images/wheel/wheel-08.jpg',
+    alt: 'Sneakers hanging from a wire at golden hour',
+    width: 540,
+  },
+  {
+    src: '/images/wheel/wheel-09.jpg',
+    alt: 'Harvey Milk Terminal with the moon overhead',
+    width: 540,
+  },
+  {
+    src: '/images/wheel/wheel-10.jpg',
+    alt: 'Sunlit tree-lined city street',
+    width: 540,
+  },
+];
+
+// Use-case blocks: not Framelight shots, so the whole image is blurred
+// and the block carries the use text instead.
+const USES: UseBlock[] = [
   {
     image: '/images/card-family.jpg',
     title: 'Family gatherings',
@@ -14,9 +83,6 @@ const FEATURED = [
     caption: 'Horizons true, colors at their best.',
     tag: 'Landscape',
   },
-];
-
-const SMALL = [
   {
     image: '/images/card-celebration.jpg',
     title: 'Celebrations',
@@ -36,6 +102,80 @@ const SMALL = [
     tag: 'Pets',
   },
 ];
+
+type WheelItem = WheelPhoto | UseBlock;
+
+// Two rows, photos interleaved with use-case blocks.
+const ROW_ONE: WheelItem[] = [
+  WHEEL[0],
+  USES[0],
+  WHEEL[1],
+  WHEEL[2],
+  USES[1],
+  WHEEL[3],
+  WHEEL[4],
+];
+const ROW_TWO: WheelItem[] = [
+  WHEEL[5],
+  USES[2],
+  WHEEL[6],
+  WHEEL[7],
+  USES[3],
+  WHEEL[8],
+  USES[4],
+  WHEEL[9],
+];
+
+function WheelRowContent({ items, hidden }: { items: WheelItem[]; hidden: boolean }) {
+  return (
+    <div className="flex shrink-0" aria-hidden={hidden}>
+      {items.map((item) =>
+        'src' in item ? (
+          <img
+            key={item.src}
+            src={item.src}
+            alt={hidden ? '' : item.alt}
+            width={item.width}
+            height={720}
+            loading="lazy"
+            decoding="async"
+            draggable={false}
+            className="mr-4 md:mr-5 h-60 md:h-72 w-auto shrink-0 select-none rounded-[24px] object-cover shadow-[0_12px_30px_-15px_rgba(0,0,0,0.25)]"
+          />
+        ) : (
+          <a
+            key={item.title}
+            href="#waitlist"
+            tabIndex={hidden ? -1 : undefined}
+            className="relative mr-4 md:mr-5 block h-60 md:h-72 aspect-[4/3] shrink-0 overflow-hidden rounded-[24px] shadow-[0_12px_30px_-15px_rgba(0,0,0,0.25)]"
+          >
+            <Image
+              src={item.image}
+              alt=""
+              fill
+              sizes="(max-width: 768px) 320px, 384px"
+              className="scale-110 object-cover blur-[20px]"
+            />
+            <div className="absolute inset-0 bg-white/30" />
+            <div className="absolute top-4 right-4">
+              <span className="px-3 py-1.5 bg-white/35 backdrop-blur-md border border-white/50 rounded-full font-sans text-[11px] font-medium text-[#2d2d2d] tracking-wide">
+                {item.tag}
+              </span>
+            </div>
+            <div className="absolute inset-x-5 bottom-5 md:inset-x-6 md:bottom-6">
+              <h3 className="font-serif text-[24px] md:text-[28px] leading-[1.05] tracking-[-0.02em] text-[#2d2d2d] mb-1">
+                {item.title}
+              </h3>
+              <p className="text-[#2d2d2d]/70 text-[13px] md:text-[14px] leading-snug">
+                {item.caption}
+              </p>
+            </div>
+          </a>
+        )
+      )}
+    </div>
+  );
+}
 
 export function UseCases() {
   return (
@@ -62,70 +202,28 @@ export function UseCases() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
-          {FEATURED.map((card, i) => (
-            <Reveal key={card.title} delay={i * 0.08} y={24}>
-              <a
-                href="#waitlist"
-                className="relative group overflow-hidden rounded-[28px] aspect-[4/3] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.2)] block"
-              >
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-                <div className="absolute top-5 right-5">
-                  <span className="px-3 py-1.5 bg-white/15 backdrop-blur-md border border-white/25 rounded-full font-sans text-[11px] font-medium text-white tracking-wide">
-                    {card.tag}
-                  </span>
-                </div>
-                <div className="absolute bottom-7 left-7 right-7">
-                  <h3 className="font-serif text-[28px] md:text-[32px] leading-[1.05] tracking-[-0.02em] text-white mb-1.5 drop-shadow-sm">
-                    {card.title}
-                  </h3>
-                  <p className="text-white/85 text-[14px] leading-snug">
-                    {card.caption}
-                  </p>
-                </div>
-              </a>
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-          {SMALL.map((card, i) => (
-            <Reveal key={card.title} delay={i * 0.08} y={24}>
-              <a
-                href="#waitlist"
-                className="relative group overflow-hidden rounded-[24px] aspect-square shadow-[0_12px_30px_-15px_rgba(0,0,0,0.2)] block"
-              >
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-                <div className="absolute top-5 right-5">
-                  <span className="px-2.5 py-1 bg-white/15 backdrop-blur-md border border-white/25 rounded-full font-sans text-[10px] font-medium text-white tracking-wide">
-                    {card.tag}
-                  </span>
-                </div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h3 className="font-serif text-[22px] md:text-[24px] leading-tight tracking-[-0.015em] text-white mb-1 drop-shadow-sm">
-                    {card.title}
-                  </h3>
-                  <p className="text-white/80 text-[13px] leading-snug">
-                    {card.caption}
-                  </p>
-                </div>
-              </a>
-            </Reveal>
-          ))}
+        {/* Endless two-row wheel: real Framelight shots + blurred use-case blocks */}
+        <div className="relative left-1/2 -ml-[50vw] w-screen">
+          <Reveal>
+            <div className="relative overflow-hidden">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 sm:w-24 bg-gradient-to-r from-[#f5f1eb] to-transparent"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 sm:w-24 bg-gradient-to-l from-[#f5f1eb] to-transparent"
+              />
+              <div className="flex w-max animate-[wheel-marquee_55s_linear_infinite]">
+                <WheelRowContent items={ROW_ONE} hidden={false} />
+                <WheelRowContent items={ROW_ONE} hidden={true} />
+              </div>
+              <div className="mt-4 md:mt-5 flex w-max animate-[wheel-marquee_75s_linear_infinite]">
+                <WheelRowContent items={ROW_TWO} hidden={false} />
+                <WheelRowContent items={ROW_TWO} hidden={true} />
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

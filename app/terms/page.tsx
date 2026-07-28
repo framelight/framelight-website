@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 };
 
-const CONTACT_EMAIL = 'framelight.ai@gmail.com';
+const CONTACT_EMAIL = 'team@framelight.ai';
 const LAST_UPDATED = 'July 6, 2026';
 
 export default function TermsOfService() {

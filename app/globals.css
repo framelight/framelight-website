@@ -50,6 +50,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Endless photo wheel: strip is two identical copies, so sliding from
+   -50% to 0 loops seamlessly while moving left to right. */
+@keyframes wheel-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

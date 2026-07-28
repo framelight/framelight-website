@@ -92,12 +92,12 @@ export function Hero() {
             <Reveal y={24} delay={0.05}>
               <div className="relative aspect-[4/5] md:aspect-square rounded-[28px] overflow-hidden shadow-[0_30px_60px_-20px_rgba(0,0,0,0.25)]">
                 <Image
-                  src="/images/hero.jpg"
-                  alt="Cherry blossom in soft afternoon light — an example of well-composed photography"
+                  src="/images/hero-flag.jpg"
+                  alt="American flag at dusk above a historic Golden Gate Bridge mural — shot on Framelight"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover object-[50%_40%]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-transparent" />
                 <div className="absolute left-5 bottom-5 right-5 flex items-center justify-between font-sans text-[11px] font-medium text-white/90">

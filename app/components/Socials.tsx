@@ -11,7 +11,7 @@ const SOCIALS = [
   {
     name: 'Instagram',
     cta: 'Follow us',
-    href: 'https://www.instagram.com/framelightai/',
+    href: 'https://www.instagram.com/framelight_official/',
     logo: '/logos/instagram.avif',
   },
   {
@@ -23,7 +23,7 @@ const SOCIALS = [
   {
     name: 'X',
     cta: 'Follow us',
-    href: 'https://x.com/FramelightAI',
+    href: 'https://x.com/framelightapp',
     logo: '/logos/x.png',
   },
 ] as const;

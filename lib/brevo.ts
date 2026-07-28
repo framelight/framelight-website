@@ -17,10 +17,10 @@ const BREVO_CONTACTS_URL = "https://api.brevo.com/v3/contacts";
 const BREVO_EMAIL_URL = "https://api.brevo.com/v3/smtp/email";
 
 const SOCIALS = [
-  { label: "Instagram", href: "https://www.instagram.com/framelightai/" },
+  { label: "Instagram", href: "https://www.instagram.com/framelight_official/" },
   { label: "TikTok", href: "https://www.tiktok.com/@framelightai" },
   { label: "Discord", href: "https://discord.gg/aEcZ3cRD7" },
-  { label: "X", href: "https://x.com/FramelightAI" },
+  { label: "X", href: "https://x.com/framelightapp" },
   { label: "LinkedIn", href: "https://www.linkedin.com/company/framelightai/" },
 ];
 

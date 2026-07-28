@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    creator: "@framelight",
+    creator: "@framelightapp",
   },
   robots: {
     index: true,

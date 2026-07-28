@@ -1,6 +1,6 @@
 import { Aperture } from 'lucide-react';
 
-const CONTACT_EMAIL = 'framelight.ai@gmail.com';
+const CONTACT_EMAIL = 'team@framelight.ai';
 
 const LINKS = [
   {
@@ -9,6 +9,7 @@ const LINKS = [
       { label: 'How it works', href: '#how' },
       { label: 'Use cases', href: '#moments' },
       { label: 'Join waitlist', href: '#waitlist' },
+      { label: 'Download beta', href: '/beta' },
     ],
   },
   {
@@ -85,7 +86,7 @@ export function Footer() {
           </a>
           <div className="flex items-center gap-3 order-1 sm:order-3">
             <a
-              href="https://x.com/FramelightAI"
+              href="https://x.com/framelightapp"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X"
@@ -94,7 +95,7 @@ export function Footer() {
               <img src="/logos/x.png" alt="X" className="w-5 h-5 rounded" />
             </a>
             <a
-              href="https://www.instagram.com/framelightai/"
+              href="https://www.instagram.com/framelight_official/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

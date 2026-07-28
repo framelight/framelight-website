@@ -33,16 +33,13 @@ export function Nav() {
           />
         </Link>
 
-        <div className="flex items-center gap-3 shrink-0 ml-auto md:ml-0">
-          {!isHome && (
-            <Link
-              href="/"
-              className="text-[12px] md:text-[13px] text-black/70 hover:text-black transition-colors font-sans inline-flex items-center gap-1.5 shrink-0"
-            >
-              <span aria-hidden>←</span>
-              Back
-            </Link>
-          )}
+        <div className="flex items-center gap-2.5 md:gap-3 shrink-0 ml-auto md:ml-0">
+          <Link
+            href="/beta"
+            className="hidden sm:inline-flex px-4 py-2 md:px-5 md:py-2 border border-black/15 text-black/80 text-[12px] md:text-[13px] font-sans font-medium rounded-full hover:border-black/40 hover:bg-white/60 transition-colors shrink-0 items-center"
+          >
+            Download beta
+          </Link>
 
           <a
             href={anchor('#waitlist')}
