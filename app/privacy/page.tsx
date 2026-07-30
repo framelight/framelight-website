@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const CONTACT_EMAIL = 'team@framelight.ai';
-const LAST_UPDATED = 'July 18, 2026';
+const LAST_UPDATED = 'July 30, 2026';
 
 export default function PrivacyPolicy() {
   return (
@@ -21,9 +21,8 @@ export default function PrivacyPolicy() {
           This Privacy Policy explains how Framelight (&quot;Framelight,&quot;
           &quot;we,&quot; &quot;us&quot;) collects, uses, and protects
           information when you visit framelight.ai, join our waitlist, join
-          our Discord community, or use the Framelight mobile app once it is
-          released. By using our website or app, you agree to the practices
-          described here.
+          our Discord community, or use the Framelight mobile app. By using
+          our website or app, you agree to the practices described here.
         </p>
       </LegalSection>
 
@@ -45,16 +44,34 @@ export default function PrivacyPolicy() {
           our Discord server, your interactions there are governed by
           Discord&apos;s own privacy policy and terms, not this one.
         </p>
+      </LegalSection>
+
+      <LegalSection title="Mobile App and On-Device Processing">
         <p>
-          <strong className="text-black/80">Mobile app.</strong> The
-          Framelight app does not collect, store, or process any personal or
-          sensitive user data in a way accessible to the developers of the
-          app. The app does not use analytics tools, tracking technologies, or
-          third-party SDKs that collect user information. If you choose to
-          save a photo to a connected account (such as Google Photos, iCloud,
-          Dropbox, or Instagram), that photo is sent directly from your device
-          to the provider you selected, under your own account and their
-          privacy policy — Framelight does not store a copy.
+          Framelight’s composition guidance and face detection are
+          processed on your device. Camera images, photos, and face-detection
+          results are not sent to Framelight or Google servers.
+        </p>
+        <p>
+          Framelight uses{' '}
+          <a
+            href="https://developers.google.com/ml-kit/terms"
+            className="text-black/80 underline hover:text-black transition-colors"
+          >
+            Google ML Kit
+          </a>{' '}
+          to provide on-device face detection. Google ML Kit collects limited
+          technical and usage information for analytics, diagnostics,
+          maintenance, and performance improvement. This information may
+          include device and operating-system information, app name and
+          version, a per-installation identifier, image format and resolution,
+          feature initialization and detection events, performance
+          measurements such as latency, and error codes.
+        </p>
+        <p>
+          This technical information is not linked to your identity and is not
+          used for advertising or tracking. Google does not receive the camera
+          images, photos, or face-detection results processed by ML Kit.
         </p>
       </LegalSection>
 
@@ -83,7 +100,7 @@ export default function PrivacyPolicy() {
       <LegalSection title="Third-Party Services">
         <p>
           We rely on a small number of service providers to operate our
-          website and waitlist:
+          website, waitlist, and mobile app:
         </p>
         <ul className="list-disc pl-5 space-y-2">
           <li>
@@ -98,12 +115,30 @@ export default function PrivacyPolicy() {
             <strong className="text-black/80">Discord</strong> — hosts our
             community server
           </li>
+          <li>
+            <strong className="text-black/80">
+              <a
+                href="https://developers.google.com/ml-kit/terms"
+                className="underline hover:text-black transition-colors"
+              >
+                Google ML Kit
+              </a>
+            </strong>{' '}
+            — performs face detection on your device. Google receives limited
+            technical, performance, diagnostic, and utilization metrics used
+            for analytics and app functionality. These metrics are not used
+            for advertising or tracking and are not linked to your identity.
+            Google does not receive camera images, photos, or face-detection
+            results.
+          </li>
         </ul>
         <p>
-          Any integrations you connect within the app (Google Photos, iCloud,
-          Dropbox, Instagram) are authorized directly between you and that
-          provider — Framelight only initiates the save action you request
-          and does not retain your credentials for those services.
+          When you choose to save or share a photo, Framelight uses your
+          device’s Photos functionality or system share sheet. The
+          selected operating system or destination provider handles that
+          action under its own privacy policy. Framelight does not retain
+          credentials for those services or store an additional server-side
+          copy of the photo.
         </p>
       </LegalSection>
 
