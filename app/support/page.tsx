@@ -2,18 +2,18 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LegalPage, LegalSection } from '../components/LegalPage';
+import { APP_STORE_URL, DISCORD_URL, GOOGLE_PLAY_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Support',
   description:
-    'Get help with Framelight. Contact our team, find answers to common questions, and reach us about the Framelight camera app for iOS and Android.',
+    'Get help with Framelight. Contact our team, find answers to common questions, and reach us about the Framelight camera app for iPhone and Android.',
   alternates: {
     canonical: '/support',
   },
 };
 
 const SUPPORT_EMAIL = 'team@framelight.ai';
-const DISCORD_URL = 'https://discord.gg/cN3VDRbzXz';
 
 export default function Support() {
   return (
@@ -32,7 +32,7 @@ export default function Support() {
         <div>
           <p className="font-serif text-xl tracking-[-0.015em]">Framelight</p>
           <p className="text-[14px] text-black/55 leading-[1.5]">
-            Real-time composition guidance for iOS &amp; Android.
+            Real-time composition guidance for iPhone &amp; Android.
           </p>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function Support() {
       <LegalSection title="Community">
         <p>
           You can also reach the team and other users in our Discord community,
-          where we share tips, answer questions, and post beta updates.
+          where we share tips, answer questions, and post product updates.
         </p>
         <p>
           <a
@@ -84,6 +84,31 @@ export default function Support() {
       </LegalSection>
 
       <LegalSection title="Frequently asked questions">
+        <p>
+          <strong className="text-black/80">
+            Where can I download Framelight?
+          </strong>
+          <br />
+          Framelight is available from the{' '}
+          <a
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black/80 underline hover:text-black transition-colors"
+          >
+            App Store
+          </a>{' '}
+          and{' '}
+          <a
+            href={GOOGLE_PLAY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black/80 underline hover:text-black transition-colors"
+          >
+            Google Play
+          </a>
+          .
+        </p>
         <p>
           <strong className="text-black/80">What is Framelight?</strong>
           <br />
@@ -132,7 +157,7 @@ export default function Support() {
         </p>
         <p>
           <strong className="text-black/80">
-            How do I delete my waitlist data?
+            I previously joined the waitlist. How do I delete my data?
           </strong>
           <br />
           Email us and we&apos;ll remove your information promptly. Your rights

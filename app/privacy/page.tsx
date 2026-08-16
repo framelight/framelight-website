@@ -4,14 +4,14 @@ import { LegalPage, LegalSection } from '../components/LegalPage';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Framelight collects, uses, and protects your information across our website, waitlist, and mobile app.',
+    'How Framelight collects, uses, and protects information across our website, former waitlist, community, and mobile app.',
   alternates: {
     canonical: '/privacy',
   },
 };
 
 const CONTACT_EMAIL = 'team@framelight.ai';
-const LAST_UPDATED = 'July 30, 2026';
+const LAST_UPDATED = 'August 16, 2026';
 
 export default function PrivacyPolicy() {
   return (
@@ -20,17 +20,19 @@ export default function PrivacyPolicy() {
         <p>
           This Privacy Policy explains how Framelight (&quot;Framelight,&quot;
           &quot;we,&quot; &quot;us&quot;) collects, uses, and protects
-          information when you visit framelight.ai, join our waitlist, join
-          our Discord community, or use the Framelight mobile app. By using
-          our website or app, you agree to the practices described here.
+          information when you visit framelight.ai, previously joined our
+          waitlist, join our Discord community, or use the Framelight mobile
+          app. By using our website or app, you agree to the practices
+          described here.
         </p>
       </LegalSection>
 
       <LegalSection title="Information We Collect">
         <p>
-          <strong className="text-black/80">Waitlist signups.</strong> When
-          you join our waitlist, we collect the email address you provide so
-          we can send you an invite and product updates.
+          <strong className="text-black/80">Former waitlist signups.</strong>{' '}
+          If you joined our waitlist before Framelight&apos;s public release, we
+          collected the email address you provided so we could send you an
+          invitation and product updates.
         </p>
         <p>
           <strong className="text-black/80">Website usage data.</strong> Our
@@ -86,9 +88,9 @@ export default function PrivacyPolicy() {
 
       <LegalSection title="How We Use Your Information">
         <ul className="list-disc pl-5 space-y-2">
-          <li>To send waitlist confirmations, beta invites, and launch updates</li>
+          <li>To contact former waitlist subscribers about Framelight</li>
           <li>To respond to support requests or questions you send us</li>
-          <li>To understand aggregate interest in the product (e.g. waitlist size)</li>
+          <li>To understand aggregate interest in the product</li>
           <li>To maintain the security and reliability of our website</li>
         </ul>
         <p>
@@ -100,7 +102,7 @@ export default function PrivacyPolicy() {
       <LegalSection title="Third-Party Services">
         <p>
           We rely on a small number of service providers to operate our
-          website, waitlist, and mobile app:
+          website, former waitlist, community, and mobile app:
         </p>
         <ul className="list-disc pl-5 space-y-2">
           <li>
@@ -109,7 +111,11 @@ export default function PrivacyPolicy() {
           </li>
           <li>
             <strong className="text-black/80">Neon</strong> — hosts the
-            database that stores waitlist emails
+            database that stores former waitlist emails
+          </li>
+          <li>
+            <strong className="text-black/80">Brevo</strong> — stores former
+            waitlist contacts and delivers related product emails
           </li>
           <li>
             <strong className="text-black/80">Discord</strong> — hosts our
@@ -144,10 +150,9 @@ export default function PrivacyPolicy() {
 
       <LegalSection title="Data Retention">
         <p>
-          We retain your waitlist email for as long as needed to send you
-          your invite and related updates, or until you ask us to delete it.
-          You can request deletion at any time — see &quot;Your Rights&quot;
-          below.
+          If you joined our former waitlist, we retain your email for related
+          product updates or until you ask us to delete it. You can request
+          deletion at any time — see &quot;Your Rights&quot; below.
         </p>
       </LegalSection>
 

@@ -25,7 +25,7 @@ const playfairDisplay = Playfair_Display({
 const siteUrl = "https://framelight.ai";
 const siteTitle = "Framelight — Perfect composition, every shot";
 const siteDescription =
-  "Real-time composition guidance, on-device. Open the camera, follow a single arrow, capture a shot you'd be proud to print.";
+  "Real-time composition guidance, on-device. Download Framelight from the App Store or Google Play and capture better-framed photos.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

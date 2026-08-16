@@ -1,11 +1,13 @@
 import { Reveal } from './Reveal';
+import Image from 'next/image';
+import { DISCORD_URL } from '@/lib/site';
 
 const SOCIALS = [
   {
     name: 'Discord',
-    cta: 'Test the beta',
-    badge: 'Beta access',
-    href: 'https://discord.gg/qtbpZ8Sfc',
+    cta: 'Join the community',
+    badge: 'Community',
+    href: DISCORD_URL,
     logo: '/logos/discord.png',
   },
   {
@@ -46,7 +48,8 @@ export function Socials() {
         </Reveal>
         <Reveal delay={0.12}>
           <p className="text-[17px] text-black/55 mb-14 max-w-xl mx-auto leading-[1.55]">
-            Test the beta, share feedback, and see what we&apos;re building next.
+            Share feedback, swap photography tips, and see what we&apos;re
+            building next.
           </p>
         </Reveal>
 
@@ -72,9 +75,11 @@ export function Socials() {
                     </span>
                   )}
                   <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
-                    <img
+                    <Image
                       src={s.logo}
                       alt={s.name}
+                      width={48}
+                      height={48}
                       className={`w-full h-full object-contain${s.name === 'Instagram' ? ' scale-125' : ''}`}
                     />
                   </div>
