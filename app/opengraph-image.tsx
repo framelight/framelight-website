@@ -76,8 +76,8 @@ export default function OpenGraphImage() {
             }}
           >
             <span>
-              Real-time composition cues, on-device. Coming soon to iOS and
-              Android.
+              Real-time composition cues, on-device. Available now on the App
+              Store and Google Play.
             </span>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span>framelight.ai</span>
-          <span>Private beta</span>
+          <span>Available now</span>
         </div>
       </div>
     ),

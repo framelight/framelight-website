@@ -131,12 +131,13 @@ function WheelRowContent({ items, hidden }: { items: WheelItem[]; hidden: boolea
     <div className="flex shrink-0" aria-hidden={hidden}>
       {items.map((item) =>
         'src' in item ? (
-          <img
+          <Image
             key={item.src}
             src={item.src}
             alt={hidden ? '' : item.alt}
             width={item.width}
             height={720}
+            sizes="(max-width: 768px) 320px, 384px"
             loading="lazy"
             decoding="async"
             draggable={false}
@@ -145,7 +146,7 @@ function WheelRowContent({ items, hidden }: { items: WheelItem[]; hidden: boolea
         ) : (
           <a
             key={item.title}
-            href="#waitlist"
+            href="#download"
             tabIndex={hidden ? -1 : undefined}
             className="relative mr-4 md:mr-5 block h-60 md:h-72 aspect-[4/3] shrink-0 overflow-hidden rounded-[24px] shadow-[0_12px_30px_-15px_rgba(0,0,0,0.25)]"
           >

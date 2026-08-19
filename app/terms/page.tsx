@@ -4,14 +4,14 @@ import { LegalPage, LegalSection } from '../components/LegalPage';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'The terms that govern your use of the Framelight website, waitlist, Discord community, and mobile app.',
+    'The terms that govern your use of the Framelight website, Discord community, and mobile app.',
   alternates: {
     canonical: '/terms',
   },
 };
 
 const CONTACT_EMAIL = 'team@framelight.ai';
-const LAST_UPDATED = 'July 6, 2026';
+const LAST_UPDATED = 'August 16, 2026';
 
 export default function TermsOfService() {
   return (
@@ -19,19 +19,19 @@ export default function TermsOfService() {
       <LegalSection title="Acceptance of Terms">
         <p>
           These Terms of Service (&quot;Terms&quot;) govern your use of
-          framelight.ai, our waitlist, our Discord community, and the
-          Framelight mobile app (collectively, the &quot;Service&quot;). By
-          using the Service, you agree to these Terms. If you don&apos;t
-          agree, please don&apos;t use the Service.
+          framelight.ai, our Discord community, and the Framelight mobile app
+          (collectively, the &quot;Service&quot;). By using the Service, you
+          agree to these Terms. If you don&apos;t agree, please don&apos;t use
+          the Service.
         </p>
       </LegalSection>
 
       <LegalSection title="Description of Service">
         <p>
           Framelight is a camera app that gives real-time, on-device
-          composition guidance to help you take better photos. The Service is
-          currently in a pre-release waitlist and beta stage — features,
-          availability, and timelines may change before general release.
+          composition guidance to help you take better photos. The app is
+          publicly available through the App Store and Google Play. Features,
+          compatibility, and availability may change over time.
         </p>
       </LegalSection>
 
@@ -43,11 +43,10 @@ export default function TermsOfService() {
         </p>
       </LegalSection>
 
-      <LegalSection title="Waitlist & Beta Access">
+      <LegalSection title="Updates & Availability">
         <ul className="list-disc pl-5 space-y-2">
-          <li>Joining the waitlist does not guarantee access or a specific invite date.</li>
-          <li>Beta software is provided &quot;as is&quot; and may contain bugs, incomplete features, or unexpected behavior.</li>
-          <li>We may change, suspend, or discontinue any part of the beta at any time without notice.</li>
+          <li>Downloads may also be subject to the terms of the store you use.</li>
+          <li>We may change, suspend, or discontinue any part of the Service at any time without notice.</li>
           <li>Feedback you share with us (including in Discord) may be used to improve Framelight without any obligation to compensate you.</li>
         </ul>
       </LegalSection>
@@ -110,18 +109,16 @@ export default function TermsOfService() {
           liable for any indirect, incidental, special, or consequential
           damages arising from your use of the Service. Our total liability
           for any claim relating to the Service will not exceed the amount
-          you&apos;ve paid us in the past 12 months (which, during the free
-          waitlist and beta period, is zero).
+          you&apos;ve paid us in the past 12 months.
         </p>
       </LegalSection>
 
       <LegalSection title="Termination">
         <p>
-          We may suspend or end your access to the waitlist, beta, Discord
-          community, or app at any time, for any reason, including if we
-          believe you&apos;ve violated these Terms. You can stop using the
-          Service at any time by leaving the waitlist, Discord server, or
-          deleting the app.
+          We may suspend or end your access to the Discord community or app at
+          any time, for any reason, including if we believe you&apos;ve violated
+          these Terms. You can stop using the Service at any time by leaving
+          the Discord server or deleting the app.
         </p>
       </LegalSection>
 

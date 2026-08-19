@@ -13,13 +13,15 @@
  *   BREVO_SENDER_NAME      - optional, from-name. Defaults to "Framelight Team".
  */
 
+import { DISCORD_URL } from "./site";
+
 const BREVO_CONTACTS_URL = "https://api.brevo.com/v3/contacts";
 const BREVO_EMAIL_URL = "https://api.brevo.com/v3/smtp/email";
 
 const SOCIALS = [
   { label: "Instagram", href: "https://www.instagram.com/framelight_official/" },
   { label: "TikTok", href: "https://www.tiktok.com/@framelightai" },
-  { label: "Discord", href: "https://discord.gg/aEcZ3cRD7" },
+  { label: "Discord", href: DISCORD_URL },
   { label: "X", href: "https://x.com/framelightapp" },
   { label: "LinkedIn", href: "https://www.linkedin.com/company/framelightai/" },
 ];

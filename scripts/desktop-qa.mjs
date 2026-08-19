@@ -28,7 +28,7 @@ const sections = [
   { id: 'problem', file: 'desktop-2-problem' },
   { id: 'how', file: 'desktop-3-demo' },
   { id: 'moments', file: 'desktop-4-moments' },
-  { id: 'waitlist', file: 'desktop-5-waitlist' },
+  { id: 'download', file: 'desktop-5-download' },
 ];
 
 // fire reveals first

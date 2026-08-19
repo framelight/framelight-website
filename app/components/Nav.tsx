@@ -11,7 +11,7 @@ export function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#f5f1eb]/75 backdrop-blur-xl border-b border-black/[0.06]">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 md:h-20 flex items-center justify-between relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 h-16 md:h-20 flex items-center justify-between relative">
         <div className="hidden md:flex items-center gap-7 font-sans">
           <a href={anchor('#problem')} className="text-[13px] text-black/70 hover:text-black transition-colors">Why</a>
           <a href={anchor('#how')} className="text-[13px] text-black/70 hover:text-black transition-colors">How it works</a>
@@ -33,20 +33,13 @@ export function Nav() {
           />
         </Link>
 
-        <div className="flex items-center gap-2.5 md:gap-3 shrink-0 ml-auto md:ml-0">
-          <Link
-            href="/beta"
-            className="hidden sm:inline-flex px-4 py-2 md:px-5 md:py-2 border border-black/15 text-black/80 text-[12px] md:text-[13px] font-sans font-medium rounded-full hover:border-black/40 hover:bg-white/60 transition-colors shrink-0 items-center"
-          >
-            Download beta
-          </Link>
-
+        <div className="flex items-center shrink-0 ml-auto md:ml-0">
           <a
-            href={anchor('#waitlist')}
-            className="px-4 py-2 md:px-5 md:py-2 bg-[#2d2d2d] text-[#f5f1eb] text-[12px] md:text-[13px] font-sans font-medium rounded-full hover:bg-black transition-colors shrink-0 inline-flex items-center gap-1.5"
+            href={anchor('#download')}
+            className="px-3 min-[390px]:px-4 py-2 md:px-5 md:py-2 bg-[#2d2d2d] text-[#f5f1eb] text-[11px] min-[390px]:text-[12px] md:text-[13px] font-sans font-medium rounded-full hover:bg-black transition-colors shrink-0 inline-flex items-center gap-1.5"
           >
-            Join<span className="hidden sm:inline"> waitlist</span>
-            <span aria-hidden className="opacity-60">→</span>
+            Download
+            <span aria-hidden className="hidden min-[390px]:inline opacity-60">→</span>
           </a>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { Demo } from './components/Demo';
 import { UseCases } from './components/UseCases';
 import { Techniques } from './components/Techniques';
 import { Socials } from './components/Socials';
-import { Waitlist } from './components/Waitlist';
+import { DownloadCTA } from './components/DownloadCTA';
 import { Footer } from './components/Footer';
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
         <UseCases />
         <Techniques />
         <Socials />
-        <Waitlist />
+        <DownloadCTA />
       </main>
       <Footer />
     </div>

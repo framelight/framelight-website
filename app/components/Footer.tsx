@@ -1,4 +1,6 @@
 import { Aperture } from 'lucide-react';
+import Image from 'next/image';
+import { DISCORD_URL } from '@/lib/site';
 
 const CONTACT_EMAIL = 'team@framelight.ai';
 
@@ -6,10 +8,9 @@ const LINKS = [
   {
     title: 'Product',
     items: [
-      { label: 'How it works', href: '#how' },
-      { label: 'Use cases', href: '#moments' },
-      { label: 'Join waitlist', href: '#waitlist' },
-      { label: 'Download beta', href: '/beta' },
+      { label: 'How it works', href: '/#how' },
+      { label: 'Use cases', href: '/#moments' },
+      { label: 'Download Framelight', href: '/#download' },
     ],
   },
   {
@@ -92,7 +93,7 @@ export function Footer() {
               aria-label="X"
               className="opacity-60 hover:opacity-100 transition-opacity"
             >
-              <img src="/logos/x.png" alt="X" className="w-5 h-5 rounded" />
+              <Image src="/logos/x.png" alt="X" width={20} height={20} className="w-5 h-5 rounded" />
             </a>
             <a
               href="https://www.instagram.com/framelight_official/"
@@ -101,16 +102,16 @@ export function Footer() {
               aria-label="Instagram"
               className="opacity-60 hover:opacity-100 transition-opacity"
             >
-              <img src="/logos/instagram.avif" alt="Instagram" className="w-5 h-5 rounded" />
+              <Image src="/logos/instagram.avif" alt="Instagram" width={20} height={20} className="w-5 h-5 rounded" />
             </a>
             <a
-              href="https://discord.gg/qtbpZ8Sfc"
+              href={DISCORD_URL}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Discord"
               className="opacity-60 hover:opacity-100 transition-opacity"
             >
-              <img src="/logos/discord.png" alt="Discord" className="w-5 h-5 rounded" />
+              <Image src="/logos/discord.png" alt="Discord" width={20} height={20} className="w-5 h-5 rounded" />
             </a>
             <a
               href="https://www.tiktok.com/@framelightai"
@@ -119,10 +120,17 @@ export function Footer() {
               aria-label="TikTok"
               className="opacity-60 hover:opacity-100 transition-opacity"
             >
-              <img src="/logos/tiktok.png" alt="TikTok" className="w-5 h-5 rounded" />
+              <Image src="/logos/tiktok.png" alt="TikTok" width={20} height={20} className="w-5 h-5 rounded" />
             </a>
           </div>
         </div>
+
+        <p className="mt-7 text-center text-[10px] leading-relaxed text-black/40">
+          Apple and the Apple logo are trademarks of Apple Inc., registered in
+          the U.S. and other countries and regions. App Store is a service mark
+          of Apple Inc. Google Play and the Google Play logo are trademarks of
+          Google LLC.
+        </p>
       </div>
     </footer>
   );

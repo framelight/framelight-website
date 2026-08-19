@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Reveal } from './Reveal';
+import { StoreBadges } from './StoreBadges';
 
 export function Hero() {
   return (
@@ -11,7 +12,7 @@ export function Hero() {
               <div className="inline-flex items-center gap-2 mb-7 pl-1 pr-3 py-1 rounded-full border border-black/10 bg-white/60 backdrop-blur-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="font-sans text-[11px] font-medium tracking-wide uppercase text-black/70">
-                  Private beta · iOS &amp; Android
+                  Available now
                 </span>
               </div>
             </Reveal>
@@ -32,24 +33,14 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="#waitlist"
-                  className="group px-7 py-3.5 bg-[#2d2d2d] text-[#f5f1eb] rounded-full hover:bg-black transition-all font-sans text-[14px] font-medium inline-flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10"
-                >
-                  Get early access
-                  <span
-                    aria-hidden
-                    className="transition-transform group-hover:translate-x-0.5"
-                  >
-                    →
-                  </span>
-                </a>
+              <div className="flex flex-col items-start gap-4">
+                <StoreBadges priority />
                 <a
                   href="#how"
-                  className="px-7 py-3.5 border border-black/15 text-black/80 rounded-full hover:border-black/40 hover:bg-white/60 transition-all font-sans text-[14px] font-medium inline-flex items-center justify-center gap-2"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-black/15 px-6 py-3 font-sans text-[14px] font-medium text-black/80 transition-all hover:border-black/40 hover:bg-white/60"
                 >
                   See how it works
+                  <span aria-hidden>↓</span>
                 </a>
               </div>
             </Reveal>

@@ -59,7 +59,7 @@ for (const vp of VIEWPORTS) {
     const nav = document.querySelector('nav');
     if (!nav) return { ok: false, reason: 'no nav' };
     const logo = nav.querySelector('a[aria-label="Framelight home"]');
-    const cta = nav.querySelector('a[href="#waitlist"]');
+    const cta = nav.querySelector('a[href="#download"]');
     if (!logo || !cta) return { ok: false, reason: 'missing logo or cta' };
     const a = logo.getBoundingClientRect();
     const b = cta.getBoundingClientRect();
@@ -125,15 +125,15 @@ for (const vp of VIEWPORTS) {
     clip: { x: 0, y: 0, width: vp.width, height: vp.height },
   });
 
-  // 5. Waitlist
+  // 5. Download
   await page.evaluate(() => {
-    const el = document.getElementById('waitlist');
+    const el = document.getElementById('download');
     if (el)
       window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 40, behavior: 'instant' });
   });
   await page.waitForTimeout(500);
   await page.screenshot({
-    path: `scripts/screenshots/${vp.name}-5-waitlist.png`,
+    path: `scripts/screenshots/${vp.name}-5-download.png`,
     clip: { x: 0, y: 0, width: vp.width, height: vp.height },
   });
 
